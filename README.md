@@ -11,12 +11,12 @@ You should not expect metrics generated with statsD to be 100% precise and extra
 
 Packages sent over User Datagram Protocol (UDP) do not have guaranteed delivery.
 
-## Packing the application
+## How to package the application
 ```bash
 ./gradlew bootJar
 ```
 
-## Running the application
+## How to run the application
 ```bash
 java -jar build/libs/cloud-watch-agent-statsd-collectd-0.0.1-SNAPSHOT.jar
 ```
