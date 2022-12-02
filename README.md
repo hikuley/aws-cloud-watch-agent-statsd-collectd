@@ -1,4 +1,4 @@
-# cloud-watch-agent-statsd-collectd
+# aws-cloud-watch-agent-statsd-collectd
 
 ## Packing the application
 ```bash
