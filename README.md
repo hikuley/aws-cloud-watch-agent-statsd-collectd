@@ -20,19 +20,9 @@ Packages sent over User Datagram Protocol (UDP) do not have guaranteed delivery.
 java -jar build/libs/cloud-watch-agent-statsd-collectd-0.0.1-SNAPSHOT.jar
 ```
 
-## Make a request
+## How to make a HTTP request to trigger a StatsD write 
 ```bash
 curl -X POST -H 'Content-type: application/json' -i localhost:8080/v1/users/login -d '{"username": "custom_username", "password": "*******"}'
-```
-
-## Storage for our Jar file
-Create a bucket on `S3` with a unique name
-
-victor-creditas-custom-app-jar-files
-
-Upload the `jar` file to the created bucket:
-```bash
-aws-vault --debug exec scd-stg -- aws s3api put-object --bucket victor-creditas-custom-app-jar-files --key build/libs/cloud-watch-agent-statsd-collectd-0.0.1-SNAPSHOT.jar --body build/libs/cloud-watch-agent-statsd-collectd-0.0.1-SNAPSHOT.jar
 ```
 
 ## Starting statsd locally
