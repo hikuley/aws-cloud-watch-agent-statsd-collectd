@@ -3,10 +3,9 @@
 
 What is StatsD?
 
-StatsD a network daemon that runs on the Node.js platform and listens for statistics, like counters and timers, sent over UDP or TCP and sends aggregates to one or more pluggable backend services (e.g., Graphite).
+StatsD is a network daemon that allows you to collect and send metrics from your application to various backend systems. It is typically used to track and monitor various performance metrics, such as request rates, response times, and error rates.
 
-When to use and when not to use StatsD
-You should not expect metrics generated with statsD to be 100% precise and extract business metrics from it (e.g: how many clients bought a product, or how many users registered for your newsletter) since data is sent over UDP (more on that below). Use statsD metrics to identify abnormalities in your services (e.g.: too many error statuses; methods taking too long to complete; etc).
+StatsD works by listening for metrics over UDP, and then aggregating and forwarding these metrics to backend systems for storage and analysis. This allows for low-overhead metric collection, as UDP is a connectionless protocol that does not require the overhead of establishing and maintaining a connection.
 
 Packages sent over User Datagram Protocol (UDP) do not have guaranteed delivery. Let's take a look one sample application.
 
